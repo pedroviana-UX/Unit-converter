@@ -12,18 +12,55 @@
 
     <p>Meu primeiro projeto Flask.</p>
     
-    <form>
+    <form action="/converter" method="POST">
         <label>Valor:</label><br>
-        <input type="number" name="valor">
+        <input type="number" step="any" name="valor" required>
         <br><br>
-        <label>Categoria:</label><br>
-        <select name="categoria">
-        <option value="comprimento">Comprimento</option>
-        <option value="peso">Peso</option>
-        <option value="temperatura">Temperatura</option>
 
-    </select>
+        <label>De:</label><br>
+        <select name="unidade_origem">
+            <optgroup label="Comprimento">
+                <option value="metro">Metro</option>
+                <option value="centimetro">Centímetro</option>
+                <option value="quilometro">Quilômetro</option>
+            </optgroup>
+            <optgroup label="Peso">
+                <option value="quilograma">Quilograma</option>
+                <option value="grama">Grama</option>
+                <option value="libra">Libra</option>
+            </optgroup>
+            <optgroup label="Temperatura">
+                <option value="celsius">Celsius</option>
+                <option value="Fahrenheit">Fahrenheit</option>
+                <option value="kelvin">Kelvin</option>
+            </optgroup>
+        </select>
+        <br>
+        <label>Para:</label><br>
+        <select name="unidade_destino">
+            <optgroup label="Comprimento">
+                    <option value="metro">Metro</option>
+                    <option value="centimetro">Centímetro</option>
+                    <option value="quilometro">Quilômetro</option>
+                </optgroup>
+                <optgroup label="Peso">
+                    <option value="quilograma">Quilograma</option>
+                    <option value="grama">Grama</option>
+                    <option value="libra">Libra</option>
+                </optgroup>
+                <optgroup label="Temperatura">
+                    <option value="celsius">Celsius</option>
+                    <option value="fahrenheit">Fahrenheit</option>
+                    <option value="kelvin">Kelvin</option>
+                </optgroup>
+            </select>
+            <br><br>
+            <button type="submit">Converter</button>
     </form>
-
+    {% if erro %}
+        <h2 style="color: red;">{{erro}}</h2>
+    {%elif resultado is not none %}
+        <h2>Resultado: {{resultado}}</h2>
+    {%endif}
 </body>
 </html>
