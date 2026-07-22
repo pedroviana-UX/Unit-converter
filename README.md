@@ -2,7 +2,7 @@
 
 Um aplicativo web desenvolvido em **Python** utilizando **Flask** para converter diferentes unidades de medida de forma simples e intuitiva.
 
-Este projeto faz parte do meu processo de aprendizado em desenvolvimento backend com Python através dos desafios do **roadmap.sh**, com foco em boas práticas de organização de código e desenvolvimento web.
+Este projeto faz parte do meu processo de aprendizado em desenvolvimento backend com Python através dos desafios do **roadmap.sh**, https://roadmap.sh/projects/unit-converter, com foco em boas práticas de organização de código e desenvolvimento web.
 
 ---
 
